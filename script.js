@@ -23,7 +23,7 @@ function changeSize(input) {
     if (input >= 2 && input <= 100) {
         populateBoard(input);
     } else {
-        console.log('Input must be between 2 and 100');
+        alert('Input must be between 2 and 100');
     }
 }
 
@@ -48,7 +48,7 @@ function resetBoard() {
 }
 
 document.querySelector('body').addEventListener('click', (e) => {
-    if (e.target.tagName != 'BUTTON') {
+    if (e.target.tagName != 'BUTTON' && e.target.tagName != 'INPUT') {
         click = !click;
         if (click) {
             document.querySelector('.mode').textContent = 'You are Drawing.'
